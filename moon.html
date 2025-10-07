@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{background-color: black;}
+    .container{
+        height:200px;
+        width:200px;
+        border-radius: 50%;
+        background-color:lightskyblue;
+        box-shadow: 5px 5px 10px 10px grey;
+        margin:auto;
+        position:relative;
+        top:300px;
+    }
+    .orbit{
+        height: 300px;
+        width:300px;
+        border-radius:50%;
+        margin:auto;
+        position:relative;
+        top:50px;
+        animation-name: moon;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .box{
+        height:50px;
+        width:50px;
+        background-color: white;
+        box-shadow: 2px 2px 3px 5px white;
+        border-radius: 50%;
+        filter: brightness(100%);
+        
+    }
+     
+    @keyframes moon{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+   
+
+  </style>
+</head>
+<body>
+<div class="container"></div>
+<div class="orbit">
+<div class="box"></div>
+<div>
+</body>
+</html>

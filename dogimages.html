@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Image Gallery</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            gap: 15px;
+        }
+        
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .dog1 {
+            grid-row: span 2;
+        }
+
+        .dog2 {
+            grid-column: span 2;
+        }
+
+        .dog4 {
+            grid-row: span 2;
+        }
+
+        .dog5 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOG IMAGES :)</h1>
+    <div class="container">
+        <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Dog1" class="dog1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2z0ERwXQUqH29urPuzWueLXKhJAY6SMyAA&s" alt="Dog2" class="dog2">
+        <img src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?cs=srgb&dl=pexels-charlesdeluvio-1851164.jpg&fm=jpg" alt="Dog3" class="dog3">
+        <img src="https://cdn.mos.cms.futurecdn.net/ASHH5bDmsp6wnK6mEfZdcU.jpg" alt="dog4" class="dog4">
+        <img src="https://www.acmewhistles.co.uk/media/magefan_blog/training-working-dog-1.jpeg" alt="Dog5" class="dog5">
+        <img src="https://media.tenor.com/_4L5hJR_kDMAAAAM/mmm-mmmm.gif" alt="Dog6" class="dog6">
+</body>
+</html>

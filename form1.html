@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Form</title>
+    
+    <style>
+       body {
+            background-color: #fdf5e6; 
+            font-family: "Helvetica", sans-serif;
+            color: #4f4f4f;
+       }
+
+       .form-container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #faf0e6;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       }
+
+       h1 {
+            text-align: center;
+            color: #8b4513; 
+            margin-bottom: 25px;
+            background-color: transparent;
+            transform: rotate(-1deg); /* A little crooked */
+       }
+
+       .form-section {
+            margin-bottom: 20px;
+       }
+
+       /* Make sections slightly tilted */
+       .form-section:nth-of-type(even) {
+            transform: rotate(0.5deg);
+       }
+       .form-section:nth-of-type(odd) {
+            transform: rotate(-0.5deg);
+            margin-left: 5px; /* Nudge it a bit */
+       }
+
+
+       label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #6d4c41;
+       }
+       
+       input[type="text"],
+       input[type="email"],
+       input[type="tel"],
+       input[type="number"],
+       input[type="date"],
+       select,
+       textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            background-color: #fff;
+       }
+
+       .options-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 15px;
+       }
+       .options-group input {
+           margin-right: 5px;
+       }
+
+       .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #dcdcdc;
+       }
+
+       .service-item {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+       }
+
+       .service-item input {
+            width: auto;
+            margin-right: 10px;
+       }
+
+       .service-item label {
+            margin-bottom: 0;
+            font-weight: normal;
+            color: #4f4f4f;
+       }
+
+       .button-group {
+            text-align: center;
+            margin-top: 30px;
+       }
+
+       button,
+       input[type="reset"] {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+       }
+
+       button {
+            background-color: #8b4513;
+            color: white;
+            transform: translateY(2px); /* Button is a little lower */
+       }
+
+       input[type="reset"] {
+            background-color: #d2b48c;
+            color: #333;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <header>
+        <h1>ADMISSION FORM</h1>
+      </header>
+      <form>
+        <div class="form-section">
+          <label for="student-name">NAME:</label>
+          <input type="text" id="student-name" name="student_name" />
+        </div>
+        
+        <div class="form-section">
+          <label for="email">YOUR EMAIL:</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        
+        <div class="form-section">
+          <label for="phone-number">YOUR PHONE NUMBER:</label>
+          <input type="tel" maxlength="10" id="phone-number" name="phone_number" />
+        </div>
+        
+        <div class="form-section">
+          <label for="age">YOUR AGE:</label>
+          <input type="number" id="age" name="age" max="60" min="15" />
+        </div>
+        
+        <div class="form-section">
+          <label for="dob">YOUR DATE OF BIRTH:</label>
+          <input type="date" id="dob" name="date_of_birth" min="1955-01-01" max="2025-06-30" />
+        </div>
+
+        <div class="form-section options-group">
+          <label><strong>GENDER:</strong></label><br>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">MALE</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">FEMALE</label>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">OTHER</label>
+        </div>
+
+        <div class="form-section">
+          <label><strong>SELECT THE SERVICES YOU WANT:</strong></label>
+          <div class="services-grid">
+            <div class="service-item">
+              <input type="checkbox" id="service-bus" name="services" value="bus" />
+              <label for="service-bus">Bus Pass</label>
+            </div>
+            <div class="service-item">
+              <input type="checkbox" id="service-mess" name="services" value="mess" />
+              <label for="service-mess">Mess/Cafeteria Plan</label>
+            </div>
+            <div class="service-item">
+              <input type="checkbox" id="service-hostel" name="services" value="hostel" />
+              <label for="service-hostel">Hostel Accommodation</label>
+            </div>
+            <div class="service-item">
+              <input type="checkbox" id="service-gym" name="services" value="gym" />
+              <label for="service-gym">Gym Membership</label>
+            </div>
+            <div class="service-item">
+              <input type="checkbox" id="service-sports" name="services" value="sports" />
+              <label for="service-sports">Sports Training Program</label>
+            </div>
+            <div class="service-item">
+              <input type="checkbox" id="service-library" name="services" value="library" />
+              <label for="service-library">Premium Library Access</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section options-group">
+          <label><strong>FOOD PREFERENCE:</strong></label><br>
+          <input type="radio" id="food-veg" name="food_preference" value="veg" />
+          <label for="food-veg">VEG</label>
+          <input type="radio" id="food-nonveg" name="food_preference" value="non-veg" />
+          <label for="food-nonveg">NON-VEG</label>
+        </div>
+
+        <div class="form-section">
+          <label for="blood-group"><strong>BLOOD GROUP:</strong></label>
+          <select name="blood_group" id="blood-group">
+            <option value="A+">A+</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+          </select>
+        </div>
+
+        <div class="form-section">
+          <label for="describe-yourself"><strong>DESCRIBE YOURSELF (200 WORDS):</strong></label>
+          <textarea id="describe-yourself" name="description" rows="5"></textarea>
+        </div>
+        
+        <div class="button-group">
+          <button type="submit">SUBMIT</button>
+          <input type="reset" id="reset-button" value="RESET">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card{
+            width: 325px;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: center;
+        }
+        img{
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #eee;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #555;
+            line-height: 1.5;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        button{
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease; 
+        }
+        button:hover{
+            transform: scale(1.05);
+            background-color: #0056b3;
+        }
+        h2{
+            margin: 10px 0; 
+        }
+        @media (max-width:400px){
+            .card{
+                width: 90%;
+            }
+            .button-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://i.redd.it/ya8qikz9kn0f1.png" alt="cat image">
+
+        <h2>Ayush Rijith</h2>
+
+        <p>Good morning! And in case I don’t see ya, good afternoon, good evening, and good night.
+        </p>
+        <p>I’m an 18-year-old first-year student at Scaler School of Technology.</p>
+
+        <div class="button-container">
+            <button>CONTACT</button>
+            <button>PORTFOLIO</button>
+        </div>
+    </div>
+</body>
+</html>
+
